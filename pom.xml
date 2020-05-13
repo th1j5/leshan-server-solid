@@ -5,9 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.inrupt.iotsolidugent.leshan</groupId>
     <artifactId>leshan-solid-server</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>solid-leshan</name>
+    <description>A Solid - LWM2M demonstration server running an embedded Jetty server</description>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

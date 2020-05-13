@@ -51,6 +51,8 @@ import org.slf4j.LoggerFactory;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+
 
 public class EventServlet extends EventSourceServlet {
 
@@ -201,8 +203,11 @@ public class EventServlet extends EventSourceServlet {
 
         @Override
         public void trace(CoapMessage message) {
-            String coapLog = EventServlet.this.gson.toJson(message);
-            sendEvent(EVENT_COAP_LOG, coapLog, endpoint);
+	    JsonElement coapLog = EventServlet.this.gson.toJsonTree(message);
+            coapLog.getAsJsonObject().addProperty("ep",this.endpoint);
+            //String coapLog = EventServlet.this.gson.toJson(message);
+            String coapLogWithEndPoint = EventServlet.this.gson.toJson(coapLog);
+            sendEvent(EVENT_COAP_LOG, coapLogWithEndPoint, endpoint);
         }
 
     }
