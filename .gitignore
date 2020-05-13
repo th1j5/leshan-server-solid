@@ -23,6 +23,9 @@ bin/
 # Visual Studio Code files #
 .vscode/
 
+# Vim files #
+*.swp
+
 # Package Files #
 *.jar
 *.war
