@@ -1,3 +1,9 @@
+# Origin
+
+Copy from https://github.com/eclipse/leshan/tree/leshan-1.0.0/leshan-server-demo
+to have a standalone maven project/module.
+
+
 # Usage
 
 install maven
